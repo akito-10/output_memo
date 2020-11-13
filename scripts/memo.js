@@ -9,7 +9,6 @@ const addBtn = document.querySelector('#add-btn');
 
 // 編集ボタンから移ってきたか判定
 let isFromEdit = false;
-console.log(isFromEdit);
 
 // クリックホームに戻る
 homeBtn.addEventListener(eventType, () => {
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 書いた後に初期化
   const getFormValue = async () => {
     [titleValue, descriptionValue, questionValue, answerValue] = getLocalStorage();
-    console.log(titleValue);
     titleArea.value = titleValue;
     descriptionArea.value = descriptionValue;
     questionArea.value = questionValue;
@@ -64,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const removeLocalStorage = () => {
       resetLocalStorage();
       resetFormValue();
-      console.log(isFromEdit);
     };
 
     const res = await removeLocalStorage();

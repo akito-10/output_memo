@@ -151,7 +151,6 @@ function displayData() {
           // クリックで復習画面へ
           aHrefClick('./review.html');
           // クリックした投稿のid取得、データベース にアクセス
-          console.log(e.target.parentNode.parentNode.parentNode.getAttribute('data-note-id'));
           let reviewId = Number(e.target.parentNode.parentNode.parentNode.getAttribute('data-note-id'));
           let store = db.transaction('posts').objectStore('posts');
           let request = store.get(reviewId);
