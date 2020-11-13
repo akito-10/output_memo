@@ -29,10 +29,6 @@ const backPageTop = () => {
   if (scrollArea) {
     scrollArea.scrollTop = 0;
   }
-}
-
-const logtittle = () => {
-  console.log(titleValue);
 };
 
 const setLocalStorage = (id, title, description, question, answer) => {

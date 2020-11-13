@@ -16,10 +16,7 @@ function addData(e) {
     question: questionValue,
     answer: answerValue
   };
-
-  console.log(titleValue);
-  console.log(newItem);
-
+  
   // データのアクセス、読み書き許可
   let transaction = db.transaction(['posts'], 'readwrite');
   // アクセス

@@ -157,7 +157,6 @@ function displayData() {
 
           // データベース にアクセスできたらストレージにセット
           request.onsuccess = () => {
-            console.log(request.result.title);
             setLocalStorage(reviewId, request.result.title, request.result.description, request.result.question, request.result.answer);
           };
         });
@@ -183,14 +182,12 @@ function displayData() {
           // クリックでフォームへ
           aHrefClick('./memo.html');
           // クリックした投稿のid取得、データベース にアクセス
-          console.log(e.target.parentNode.parentNode.parentNode.getAttribute('data-note-id'));
           let editId = Number(e.target.parentNode.parentNode.parentNode.getAttribute('data-note-id'));
           let store = db.transaction('posts').objectStore('posts');
           let request = store.get(editId);
 
           // データベース にアクセスできたらストレージにセット
           request.onsuccess = () => {
-            console.log(request.result.title);
             setLocalStorage(editId, request.result.title, request.result.description, request.result.question, request.result.answer);
           };
         });
