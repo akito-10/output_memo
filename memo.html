@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="css/breakpoints/mobile.css">
+  <link rel="stylesheet" href="css/breakpoints/desktop.scss">
+</head>
+<body>
+  <div id="global-container">
+    <div id="container">
+      <header class="header">
+        <button class="header__btn button-style-non">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__home">Homeへ</div>
+        <div class="header__login"><a href="edit.html">編集</a></div>
+      </header>
+      <main>
+        <form class="memo-wrapper">
+          <div class="memo-contents">
+            <div class="memo-contents__title">
+              <p class="memo-contents__label">タイトル</p>
+              <input type="text" name="title" id="memo-title" class="memo-contents__input" placeholder="タイトル：">
+            </div>
+            <div class="memo-contents__description">
+              <p class="memo-contents__label">解説</p>
+              <textarea name="description" id="memo-description" cols="30" rows="5" class="memo-contents__textarea" placeholder="解説："></textarea>
+            </div>
+            <div>
+              <p class="memo-contents__label">問題文</p>
+              <textarea name="question" id="memo-question" cols="30" rows="5" class="memo-contents__textarea" placeholder="問題文："></textarea>
+            </div>
+            <div>
+              <p class="memo-contents__label">解答</p>
+              <input type="text" name="question" id="memo-answer" class="memo-contents__input" placeholder="解答：">
+            </div>
+            <div class="memo-contents__btns">
+              <button class="memo-contents__btn button-style-non" id="clear-btn" type="reset">戻る</button>
+              <button class="memo-contents__btn button-style-non" id="add-btn">追加</button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+    <nav class="menu">
+      <h3 class="menu__title">MENU</h3>
+      <div class="menu__question"><a href="./index.html">問題一覧</a></div>
+      <div class="menu__question"><a href="./edit.html">問題編集</a></div>
+      <div class="menu__output"><a href="./memo.html">アウトプット</a></div>
+    </nav>
+  </div>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/memo.js"></script>
+  <script src="scripts/openDatabase.js"></script>
+  <script src="scripts/formDataset.js"></script>
+</body>
+</html>

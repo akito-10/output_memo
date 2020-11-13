@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="css/breakpoints/mobile.css">
+  <link rel="stylesheet" href="css/breakpoints/desktop.scss">
+</head>
+<body>
+  <div id="global-container">
+    <div id="container">
+      <header class="header">
+        <button class="header__btn button-style-non">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__top">TOPへ</div>
+        <div class="header__back">Home</div>
+      </header>
+      <main>
+        <div class="main-contents">
+        </div>
+      </main>
+    </div>
+    <nav class="menu">
+      <h3 class="menu__title">MENU</h3>
+      <div class="menu__question"><a href="./index.html">問題一覧</a></div>
+      <div class="menu__question"><a href="./edit.html">問題編集</a></div>
+      <div class="menu__output"><a href="./memo.html">アウトプット</a></div>
+    </nav>
+    <button id="post-edit" class="button-style-non">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+<script src="scripts/main.js"></script>
+<script src="./scripts/edit.js"></script>
+<script src="./scripts/openDatabase.js"></script>
+</body>
+</html>

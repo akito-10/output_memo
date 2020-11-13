@@ -1,0 +1,459 @@
+$cBlue: #0099CC;
+$cBlack: black;
+$cWhite: white;
+$cMenu: black;
+$cRed: #FF0066;
+$cGreen: #00AA00;
+
+a {
+  color: $cWhite;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-style-non {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+.disable {
+  display: none;
+}
+
+#global-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#container {
+  position: relative;
+  background-color: $cWhite;
+  height: 100vh;
+  transition: all 0.5s;
+  z-index: 1;
+  overflow: auto;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $cBlue;
+  line-height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0px 1px 5px $cBlack;
+  &__btn {
+    display: inline-block;
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    & > span {
+      display: block;
+      background-color: $cWhite;
+      height: 2px;
+      margin-bottom: 9px;
+      transition: transform 0.7s;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__top {
+    color: $cWhite;
+    cursor: pointer;
+    margin-left: 20px;
+    user-select: none;
+  }
+  &__home {
+    margin-left: 20px;
+    user-select: none;
+    color: $cWhite;
+    cursor: pointer;
+  }
+  &__back {
+    margin-right: 20px;
+    user-select: none;
+    color: $cWhite;
+    cursor: pointer;
+  }
+  &__login {
+    margin-right: 20px;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 150px;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  transition: all 0.3s;
+  text-align: center;
+  &__title {
+    border-bottom: 1px solid $cBlack;
+    opacity: 0;
+    transform: translate3d(0, -10px, -1000px);
+    transition: all 0.3s;
+    font-size: 15px;
+    width: 80px;
+    visibility: hidden;
+    margin: 0 auto;
+  }
+  & div {
+    transform: translate3d(0, -10px, -1000px);
+    margin: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s, opacity 0.2s;
+    & a {
+      color: $cMenu;
+      display: block;
+    }
+  }
+}
+
+.opened {
+  & #container {
+    // transform: translateX(150px);
+    margin-left: 150px;
+    box-shadow: -5px 3px 5px rgba(0, 0, 0, 0.3);
+    & .header {
+      &__btn {
+        & > span {
+          &:nth-child(1) {
+            transform: translateY(11px) rotate(135deg);
+          }
+          &:nth-child(2) {
+            transform: translateX(-20px) scaleX(0);
+          }
+          &:nth-child(3) {
+            transform: translateY(-11px) rotate(-135deg);
+          }
+        }
+      }
+    }
+  }
+  & .menu {
+    &__title {
+      transform: none;
+      visibility: visible;
+      opacity: 1;
+    }
+    & div {
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.1s * $i;
+        }
+      }
+      &:hover a {
+        color: $cBlue;
+      }
+    }
+  }
+}
+
+#memo-open {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $cBlue;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px  $cBlack;
+  z-index: 2;
+  cursor: pointer;
+  & > span {
+    display: block;
+    background-color: $cWhite;
+    width: 25px;
+    height: 2px;
+    margin: auto;
+    &:nth-child(1) {
+      transform: translateY(2px) rotate(90deg);
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+#post-edit {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $cGreen;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px  $cBlack;
+  z-index: 2;
+  cursor: pointer;
+  & > span {
+    display: block;
+    background-color: $cWhite;
+    width: 20px;
+    height: 2px;
+    margin: auto;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.main-contents {
+  padding-top: 50px;
+  width: 100vw;
+  height: 100vh;
+  top: 50px;
+  text-align: center;
+  &__post {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid $cBlack;
+  }
+  &__cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($cBlack , 0.6);
+    text-align: right;
+    & button {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+      margin-right: 5px;
+      background-color: $cRed;
+      border-radius: 3px;
+      & > span {
+        margin: auto;
+        display: block;
+        width: 15px;
+        height: 2px;
+        background-color: $cBlack;
+        &:nth-child(1) {
+          transform: translateY(2px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+  &__text {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &__link {
+    display: inline-block;
+    font-weight: 600;
+    color: $cBlack;
+    font-size: 18px;
+    margin-bottom: 5px;
+    &:hover {
+      color: $cBlue;
+      opacity: 0.8;
+    }
+  }
+  &__description {
+    font-size: 14px;
+  }
+  &__review {
+    margin: 10px 0;
+    text-align: center;
+  }
+  &__btn {
+    padding: 5px;
+    border-radius: 5px;
+    color: $cWhite;
+    background-color: $cBlue;
+    box-shadow: 0px 2px $cBlack;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+  }
+}
+
+.memo-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.memo-contents {
+  padding: 50px 80px 0px 80px;
+  text-align: center;
+  height: 100%;
+
+  & > div {
+    margin-top: 20px;
+    width: 100%;
+    &:last-child {
+      width: 35%;
+      margin-top: 30px;
+    }
+  }
+
+  &__label {
+    margin: 5px;
+  }
+  &__input {
+    border: 1px solid $cBlack;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  &__textarea {
+    border: 1px solid $cBlack;
+    border-radius: 5px;
+    padding-left: 20px;
+  }
+
+  &__btns {
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+  display: inline-block;
+  color: $cWhite;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px $cBlack;
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  &:nth-child(1) {
+    background-color: $cRed;
+  }
+  &:nth-child(2) {
+    background-color: $cGreen;
+  }
+  }
+}
+
+.review-contents {
+  padding: 50px 80px 0px;
+  width: 100vw;
+  height: 100vh;
+  top: 50px;
+  text-align: center;
+  &__question {
+    margin-top: 30px;
+  }
+  &__statement {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px $cBlue solid;
+    border-radius: 5px;
+  }
+  &__answer {
+    margin-top: 30px;
+    text-align: center;
+  }
+  &__text {
+    margin: 20px auto 10px;
+    padding-left: 5px;
+    display: block;
+    border: 1px $cBlue solid;
+    border-radius: 5px;
+    text-align: center;
+  }
+  &__title {
+    margin: 0 auto;
+    border-bottom: 1px $cBlack double;
+    width: 50px;
+  }
+  &__btn {
+    padding: 5px;
+    border-radius: 5px;
+    color: $cWhite;
+    background-color: $cBlue;
+    box-shadow: 0px 2px $cBlack;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+  }
+}
+
+.description-contents {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  &__main {
+    width: 300px;
+    max-height: 300px;
+    border: 1px $cBlue solid;
+    border-radius: 5px;
+    background-color: $cWhite;
+  }
+  &__answer {
+    padding: 10px 5px;
+  }
+  &__title {
+    margin: 10px 5px;
+  }
+  &__text {
+    margin: 0 20px 10px;
+    padding: 10px;
+    border: 1px $cBlack solid;
+    border-radius: 5px;
+  }
+  &__btn {
+    padding: 5px;
+    border-radius: 2px;
+    color: $cWhite;
+    background-color: $cBlue;
+    margin-bottom: 10px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.description-cover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $cBlack;
+  opacity: 0.6;
+}
