@@ -255,6 +255,7 @@ a {
         width: 15px;
         height: 2px;
         background-color: $cBlack;
+        pointer-events: none;
         &:nth-child(1) {
           transform: translateY(2px) rotate(45deg);
         }

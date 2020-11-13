@@ -92,6 +92,7 @@ function deletePost(e) {
     // 選択した投稿に一致するidの投稿の要素を削除
     const removePost = async () => {
       e.target.parentNode.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode.parentNode);
+      alert(`delete${postId}`);
       // リロードすることで再描画
       const reload = await location.reload();
     };
