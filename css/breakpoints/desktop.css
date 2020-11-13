@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=desktop.css.map */
+.header__btn {
+  display: none;
+}
+
+.menu {
+  z-index: 10;
+  width: 150px;
+  height: 100%;
+  border-right: 1px solid black;
+}
+
+.menu__title {
+  margin: 30px auto 0;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu div {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-contents {
+  margin: 0 0 0 auto;
+  width: calc(100vw - 150px);
+}
+
+.review-contents {
+  margin: 0 0 0 auto;
+  width: calc(100vw - 150px);
+}
+/*# sourceMappingURL=desktop.css.map */

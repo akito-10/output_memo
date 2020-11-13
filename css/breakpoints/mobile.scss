@@ -4,12 +4,34 @@ $cWhite: white;
 $cMenu: black;
 $cRed: #FF0066;
 $cGreen: #00AA00;
+$headerHeight : 50px;
 
 a {
   color: $cWhite;
   text-decoration: none;
   cursor: pointer;
 }
+
+.round-btn-style {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px  $cBlack;
+  z-index: 2;
+  cursor: pointer;
+}
+
+// .main-btn-style {
+//   padding: 5px;
+//   border-radius: 5px;
+//   color: $cWhite;
+//   background-color: $cBlue;
+//   box-shadow: 0px 2px $cBlack;
+// }
 
 .button-style-non {
   background-color: transparent;
@@ -25,6 +47,7 @@ a {
 #global-container {
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 #container {
@@ -38,7 +61,7 @@ a {
 
 .header {
   width: 100%;
-  height: 50px;
+  height: $headerHeight;
   display: flex;
   justify-content: space-between;
   background-color: $cBlue;
@@ -48,6 +71,7 @@ a {
   z-index: 2;
   box-shadow: 0px 1px 5px $cBlack;
   &__btn {
+    @extend .button-style-non;
     display: inline-block;
     width: 40px;
     margin-left: 10px;
@@ -88,7 +112,7 @@ a {
 
 .menu {
   position: fixed;
-  top: 50px;
+  top: $headerHeight;
   left: 0;
   width: 150px;
   transform-style: preserve-3d;
@@ -162,17 +186,9 @@ a {
 }
 
 #memo-open {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  @extend .button-style-non;
+  @extend .round-btn-style;
   background-color: $cBlue;
-  border-radius: 50%;
-  box-shadow: 0px 1px 3px  $cBlack;
-  z-index: 2;
-  cursor: pointer;
   & > span {
     display: block;
     background-color: $cWhite;
@@ -192,17 +208,9 @@ a {
 }
 
 #post-edit {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  @extend .button-style-non;
+  @extend .round-btn-style;
   background-color: $cGreen;
-  border-radius: 50%;
-  box-shadow: 0px 1px 3px  $cBlack;
-  z-index: 2;
-  cursor: pointer;
   & > span {
     display: block;
     background-color: $cWhite;
@@ -223,10 +231,9 @@ a {
 }
 
 .main-contents {
-  padding-top: 50px;
+  padding-top: $headerHeight;
   width: 100vw;
   height: 100vh;
-  top: 50px;
   text-align: center;
   &__post {
     position: relative;
@@ -302,13 +309,11 @@ a {
   }
 }
 
-.memo-wrapper {
+
+.memo-contents {
   position: absolute;
   width: 100vw;
   height: 100vh;
-}
-
-.memo-contents {
   padding: 50px 80px 0px 80px;
   text-align: center;
   height: 100%;
@@ -343,11 +348,12 @@ a {
     justify-content: space-between;
   }
   &__btn {
-  display: inline-block;
-  color: $cWhite;
-  padding: 5px 10px;
-  border-radius: 5px;
-  box-shadow: 0px 2px $cBlack;
+    @extend .button-style-non;
+    display: inline-block;
+    color: $cWhite;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px $cBlack;
   &:active {
     transform: translateY(2px);
     box-shadow: none;
@@ -365,7 +371,6 @@ a {
   padding: 50px 80px 0px;
   width: 100vw;
   height: 100vh;
-  top: 50px;
   text-align: center;
   &__question {
     margin-top: 30px;
@@ -394,6 +399,7 @@ a {
     width: 50px;
   }
   &__btn {
+    @extend .button-style-non;
     padding: 5px;
     border-radius: 5px;
     color: $cWhite;
@@ -436,6 +442,7 @@ a {
     border-radius: 5px;
   }
   &__btn {
+    @extend .button-style-non;
     padding: 5px;
     border-radius: 2px;
     color: $cWhite;

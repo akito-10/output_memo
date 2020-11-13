@@ -1,1 +1,39 @@
+.header {
+  &__btn {
+    // @extend .disable;
+    display: none;
+  }
+}
 
+.menu {
+  z-index: 10;
+  width: 150px;
+  height: 100%;
+  border-right: 1px solid black;
+  &__title {
+    margin: 30px auto 0;
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+  & div {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.main-contents {
+  margin: 0 0 0 auto;
+  width: calc(100vw - 150px);
+}
+
+.review-contents {
+  margin: 0 0 0 auto;
+  width: calc(100vw - 150px);
+}
+
+// .memo-contents {
+//   margin: 0 0 0 auto;
+//   width: calc(100vw - max(15vw, 150px));
+// }
