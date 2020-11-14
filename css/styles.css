@@ -87,6 +87,10 @@ a {
   margin-bottom: 0;
 }
 
+.header__empty {
+  display: none;
+}
+
 .header__top {
   color: white;
   cursor: pointer;
@@ -566,6 +570,9 @@ a {
 @media (min-width: 650px) {
   .header__btn {
     display: none;
+  }
+  .header__empty {
+    display: inline-block;
   }
   .menu {
     z-index: 10;

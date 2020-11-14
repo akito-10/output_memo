@@ -87,6 +87,10 @@ a {
   margin-bottom: 0;
 }
 
+.header__empty {
+  display: none;
+}
+
 .header__top {
   color: white;
   cursor: pointer;

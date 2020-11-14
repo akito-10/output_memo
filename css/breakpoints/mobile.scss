@@ -87,6 +87,9 @@ a {
       }
     }
   }
+  &__empty {
+    display: none;
+  }
   &__top {
     color: $cWhite;
     cursor: pointer;

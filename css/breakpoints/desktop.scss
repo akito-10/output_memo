@@ -3,6 +3,9 @@
     // @extend .disable;
     display: none;
   }
+  &__empty {
+    display: inline-block;
+  }
 }
 
 .menu {
