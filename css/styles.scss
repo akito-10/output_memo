@@ -1,5 +1,5 @@
-@import 'breakpoints/mobile';
+@import './breakpoints/mobile.scss';
 
 @media (min-width: 650px) {
-  @import 'breakpoints/desktop';
+  @import './breakpoints/desktop';
 }
