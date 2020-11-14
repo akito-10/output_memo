@@ -29,6 +29,17 @@
 .main-contents {
   margin: 0 0 0 auto;
   width: calc(100vw - 150px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  &__post {
+    display: inline-block;
+    flex-basis: 47%;
+    height: 150px;
+    border: 1px solid #0099CC;
+    border-radius: 5px;
+    margin: 30px 10px 0 10px;
+  }
 }
 
 .review-contents {
@@ -37,6 +48,7 @@
 }
 
 // .memo-contents {
-//   margin: 0 0 0 auto;
-//   width: calc(100vw - max(15vw, 150px));
+//   &__btns {
+
+//   }
 // }

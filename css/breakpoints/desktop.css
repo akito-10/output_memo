@@ -31,6 +31,24 @@
 .main-contents {
   margin: 0 0 0 auto;
   width: calc(100vw - 150px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main-contents__post {
+  display: inline-block;
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
+  height: 150px;
+  border: 1px solid #0099CC;
+  border-radius: 5px;
+  margin: 30px 10px 0 10px;
 }
 
 .review-contents {
