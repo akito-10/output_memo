@@ -12,7 +12,7 @@
   z-index: 10;
   width: 150px;
   height: 100%;
-  border-right: 1px solid black;
+  border-right: 1px solid $cBlack;
   &__title {
     margin: 30px auto 0;
     transform: none;
@@ -37,7 +37,7 @@
     flex-basis: 47%;
     max-width: 290px;
     height: 175px;
-    border: 1px solid #0099CC;
+    border: 1px solid $cBlue;
     border-radius: 5px;
     margin: 30px 10px 0 10px;
   }
