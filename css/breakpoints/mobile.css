@@ -357,6 +357,8 @@ a {
 .main-contents__description {
   font-size: 14px;
   overflow-wrap: break-word;
+  overflow: scroll;
+  max-height: 75px;
 }
 
 .main-contents__review {

@@ -292,6 +292,8 @@ a {
   &__description {
     font-size: 14px;
     overflow-wrap: break-word;
+    overflow: scroll;
+    max-height: 75px;
   }
   &__review {
     margin: 10px 0;

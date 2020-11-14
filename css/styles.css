@@ -357,6 +357,8 @@ a {
 .main-contents__description {
   font-size: 14px;
   overflow-wrap: break-word;
+  overflow: scroll;
+  max-height: 75px;
 }
 
 .main-contents__review {
@@ -613,9 +615,14 @@ a {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
     max-width: 290px;
+    height: 175px;
     border: 1px solid #0099CC;
     border-radius: 5px;
     margin: 30px 10px 0 10px;
+  }
+  .main-contents__description {
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   .review-contents {
     margin: 0 0 0 auto;
