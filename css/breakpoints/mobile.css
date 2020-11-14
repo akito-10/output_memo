@@ -356,6 +356,7 @@ a {
 
 .main-contents__description {
   font-size: 14px;
+  overflow-wrap: break-word;
 }
 
 .main-contents__review {
@@ -465,10 +466,12 @@ a {
 }
 
 .review-contents__statement {
-  margin-top: 20px;
+  margin: 20px auto 0;
   padding: 10px;
   border: 1px #0099CC solid;
   border-radius: 5px;
+  max-width: 600px;
+  overflow-wrap: break-word;
 }
 
 .review-contents__answer {

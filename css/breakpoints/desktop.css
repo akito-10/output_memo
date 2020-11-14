@@ -45,7 +45,7 @@
   display: inline-block;
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
-  height: 150px;
+  max-width: 290px;
   border: 1px solid #0099CC;
   border-radius: 5px;
   margin: 30px 10px 0 10px;
@@ -54,5 +54,9 @@
 .review-contents {
   margin: 0 0 0 auto;
   width: calc(100vw - 150px);
+}
+
+.memo-contents__btns {
+  max-width: 180px;
 }
 /*# sourceMappingURL=desktop.css.map */

@@ -291,6 +291,7 @@ a {
   }
   &__description {
     font-size: 14px;
+    overflow-wrap: break-word;
   }
   &__review {
     margin: 10px 0;
@@ -379,10 +380,12 @@ a {
     margin-top: 30px;
   }
   &__statement {
-    margin-top: 20px;
+    margin: 20px auto 0;
     padding: 10px;
-    border: 1px $cBlue solid;
+    border: 1px #0099CC solid;
     border-radius: 5px;
+    max-width: 600px;
+    overflow-wrap: break-word;
   }
   &__answer {
     margin-top: 30px;

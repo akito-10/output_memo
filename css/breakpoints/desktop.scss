@@ -35,7 +35,7 @@
   &__post {
     display: inline-block;
     flex-basis: 47%;
-    height: 150px;
+    max-width: 290px;
     border: 1px solid #0099CC;
     border-radius: 5px;
     margin: 30px 10px 0 10px;
@@ -47,8 +47,13 @@
   width: calc(100vw - 150px);
 }
 
-// .memo-contents {
-//   &__btns {
+.memo-contents {
+  &__btns {
+    max-width: 180px;
+  }
+}
 
-//   }
-// }
+.review-contents {
+  &__statement {
+  }
+}

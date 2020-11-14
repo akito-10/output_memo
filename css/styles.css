@@ -356,6 +356,7 @@ a {
 
 .main-contents__description {
   font-size: 14px;
+  overflow-wrap: break-word;
 }
 
 .main-contents__review {
@@ -465,10 +466,12 @@ a {
 }
 
 .review-contents__statement {
-  margin-top: 20px;
+  margin: 20px auto 0;
   padding: 10px;
   border: 1px #0099CC solid;
   border-radius: 5px;
+  max-width: 600px;
+  overflow-wrap: break-word;
 }
 
 .review-contents__answer {
@@ -607,8 +610,9 @@ a {
   }
   .main-contents__post {
     display: inline-block;
-    width: 290px;
-    height: 150px;
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    max-width: 290px;
     border: 1px solid #0099CC;
     border-radius: 5px;
     margin: 30px 10px 0 10px;
@@ -616,6 +620,9 @@ a {
   .review-contents {
     margin: 0 0 0 auto;
     width: calc(100vw - 150px);
+  }
+  .memo-contents__btns {
+    max-width: 180px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
