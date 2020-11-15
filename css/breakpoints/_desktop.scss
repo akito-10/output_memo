@@ -36,7 +36,7 @@
     display: inline-block;
     flex-basis: 47%;
     max-width: 290px;
-    height: 175px;
+    height: 185px;
     border: 1px solid $cBlue;
     border-radius: 5px;
     margin: 30px 10px 0 10px;
@@ -44,6 +44,7 @@
   &__description {
     border: 1px solid #ccc;
     border-radius: 5px;
+    max-height: 65px;
   }
 }
 

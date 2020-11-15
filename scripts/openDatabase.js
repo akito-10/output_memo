@@ -42,11 +42,13 @@ function createPost() {
   const link = document.createElement('a');
   const description = document.createElement('p');
   const btn = document.createElement('button');
+  const p = document.createElement('p')
 
   post.classList.add('main-contents__post');
   text.classList.add('main-contents__text');
   review.classList.add('main-contents__review');
   link.classList.add('main-contents__link');
+  p.textContent = '< 解説 >';
   description.classList.add('main-contents__description');
   btn.classList.add('main-contents__btn');
   btn.classList.add('button-style-non');
@@ -54,6 +56,7 @@ function createPost() {
   mainContents.appendChild(post);
   post.appendChild(text);
   text.appendChild(link);
+  text.appendChild(p);
   text.appendChild(description);
   text.appendChild(review);
   review.appendChild(btn);
@@ -140,7 +143,7 @@ function displayData() {
         // ホーム描画処理
         const [link, description, btn, post] = createPost();
         link.textContent = cursor.value.title;
-        description.textContent = `解説：${cursor.value.description}`;
+        description.textContent = cursor.value.description;
         btn.textContent = '復習する';
 
         btn.addEventListener('click', e => {
@@ -173,7 +176,7 @@ function displayData() {
         post.insertBefore(cover, post.firstChild);
 
         link.textContent = cursor.value.title;
-        description.textContent = `解説：${cursor.value.description}`;
+        description.textContent = cursor.value.description;
         editBtn.textContent = '編集する';
 
         editBtn.addEventListener('click', e => {
