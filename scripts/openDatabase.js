@@ -146,7 +146,7 @@ function displayData() {
         description.textContent = cursor.value.description;
         btn.textContent = '復習する';
 
-        btn.addEventListener('click', e => {
+        btn.addEventListener(eventType, e => {
           // クリックで復習画面へ
           aHrefClick('./review.html');
           // クリックした投稿のid取得、データベース にアクセス
@@ -179,7 +179,7 @@ function displayData() {
         description.textContent = cursor.value.description;
         editBtn.textContent = '編集する';
 
-        editBtn.addEventListener('click', e => {
+        editBtn.addEventListener(eventType, e => {
           // クリックでフォームへ
           aHrefClick('./memo.html');
           // クリックした投稿のid取得、データベース にアクセス
@@ -210,7 +210,7 @@ function displayData() {
         description.textContent = 'まだ問題を追加できていません。';
         btn.textContent = '問題作成';
 
-        btn.addEventListener('click', () => {
+        btn.addEventListener(eventType, () => {
           aHrefClick('./memo.html');
         });
       }

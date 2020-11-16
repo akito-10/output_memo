@@ -5,6 +5,8 @@ let descriptionValue;
 let questionValue;
 let answerValue;
 
+const eventType = window.ontouchstart ? 'touchstart' : 'click';
+
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.querySelector('.header__btn');
   const gContainer = document.querySelector('#global-container');

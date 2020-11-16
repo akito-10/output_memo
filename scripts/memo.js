@@ -12,7 +12,7 @@ let isFromEdit = false;
 console.log(isFromEdit);
 
 // クリックホームに戻る
-homeBtn.addEventListener('click', () => {
+homeBtn.addEventListener(eventType, () => {
   aHrefClick('./index.html');
 });
 
@@ -39,7 +39,7 @@ addBtn.addEventListener('mouseover', () => {
 });
 
 // 戻るボタンクリックで変数をからにしてホームに戻る
-clearBtn.addEventListener('click', () => {
+clearBtn.addEventListener(eventType, () => {
   aHrefClick('./index.html');
   resetFormValue();
 });

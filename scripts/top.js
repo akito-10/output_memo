@@ -2,7 +2,7 @@ const topBtn = document.querySelector('.header__top');
 const memoOpen = document.querySelector('#memo-open');
 
 // topボタンでcontainerのtopへ
-topBtn.addEventListener('click', () => {
+topBtn.addEventListener(eventType, () => {
   const scrollArea = container;
   if (scrollArea) {
     scrollArea.scrollTop = 0;
@@ -10,6 +10,6 @@ topBtn.addEventListener('click', () => {
 });
 
 // クリックでmemoページへ
-memoOpen.addEventListener('click', () => {
+memoOpen.addEventListener(eventType, () => {
   aHrefClick('./memo.html');
 });

@@ -14,7 +14,7 @@ let title,
     question,
     answer;
 
-homeBtn.addEventListener('click', () => {
+homeBtn.addEventListener(eventType, () => {
   aHrefClick('./index.html');
 });
 
@@ -34,7 +34,7 @@ const setReview = async() => {
 setReview();
 
 
-answerBtn.addEventListener('click', () => {
+answerBtn.addEventListener(eventType, () => {
   if(answerText.value === answer) {
     confirmDisplayDescription('正解！');
   } else {
@@ -42,11 +42,11 @@ answerBtn.addEventListener('click', () => {
   }
 });
 
-closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener(eventType, () => {
   closeDescription();
 });
 
-descriptionCover.addEventListener('click', () => {
+descriptionCover.addEventListener(eventType, () => {
   closeDescription();
 });
 

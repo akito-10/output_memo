@@ -3,12 +3,12 @@ const topBtn = document.querySelector('.header__top');
 const postEdit = document.querySelector('#post-edit');
 
 // クリックでホームに戻る
-homeBtn.addEventListener('click', () => {
+homeBtn.addEventListener(eventType, () => {
   aHrefClick('index.html');
 });
 
 // 編集ボタンクリックで削除ボタン表示
-postEdit.addEventListener('click', () => {
+postEdit.addEventListener(eventType, () => {
   const covers = document.querySelectorAll('.main-contents__cover');
 
   covers.forEach(cover => {
@@ -17,7 +17,7 @@ postEdit.addEventListener('click', () => {
 });
 
 // topボタンでcontainerのtopへ
-topBtn.addEventListener('click', () => {
+topBtn.addEventListener(eventType, () => {
   const scrollArea = container;
   if (scrollArea) {
     scrollArea.scrollTop = 0;
