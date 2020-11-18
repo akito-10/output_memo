@@ -3,10 +3,7 @@ const memoOpen = document.querySelector('#memo-open');
 
 // topボタンでcontainerのtopへ
 topBtn.addEventListener(eventType, () => {
-  const scrollArea = container;
-  if (scrollArea) {
-    scrollArea.scrollTop = 0;
-  }
+  backPageTop();
 });
 
 // クリックでmemoページへ

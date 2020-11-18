@@ -24,6 +24,13 @@ const aHrefClick = link => {
   a.click();
 };
 
+const backPageTop = () => {
+  const scrollArea = container;
+  if (scrollArea) {
+    scrollArea.scrollTop = 0;
+  }
+}
+
 const logtittle = () => {
   console.log(titleValue);
 };
@@ -57,4 +64,4 @@ const resetFormValue = () => {
   descriptionValue = '';
   questionValue = '';
   answerValue = '';
-}
+};
