@@ -12,7 +12,7 @@ a {
   bottom: 20px;
   right: 20px;
   border-radius: 50%;
-  box-shadow: 0px 1px 3px  $cBlack;
+  box-shadow: 0px 1px 3px $cBlack;
   z-index: 2;
   cursor: pointer;
 }
@@ -239,7 +239,7 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba($cBlack , 0.6);
+    background-color: rgba($cBlack, 0.6);
     text-align: right;
     & button {
       display: inline-block;
@@ -308,12 +308,11 @@ a {
   }
 }
 
-
 .memo-contents {
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 50px 80px 0px 80px;
+  margin-top: $headerHeight;
   text-align: center;
   height: 100%;
 
@@ -322,6 +321,7 @@ a {
     width: 100%;
     &:last-child {
       width: 35%;
+      min-width: 150px;
       margin-top: 30px;
     }
   }
@@ -339,6 +339,7 @@ a {
     border: 1px solid $cBlack;
     border-radius: 5px;
     padding-left: 20px;
+    width: 60%;
   }
 
   &__btns {
@@ -353,16 +354,16 @@ a {
     padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 0px 2px $cBlack;
-  &:active {
-    transform: translateY(2px);
-    box-shadow: none;
-  }
-  &:nth-child(1) {
-    background-color: $cRed;
-  }
-  &:nth-child(2) {
-    background-color: $cGreen;
-  }
+    &:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+    &:nth-child(1) {
+      background-color: $cRed;
+    }
+    &:nth-child(2) {
+      background-color: $cGreen;
+    }
   }
 }
 
@@ -377,7 +378,7 @@ a {
   &__statement {
     margin: 20px auto 0;
     padding: 10px;
-    border: 1px #0099CC solid;
+    border: 1px #0099cc solid;
     border-radius: 5px;
     max-width: 600px;
     overflow-wrap: break-word;
